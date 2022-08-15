@@ -28,4 +28,13 @@ public class NewUser{
 	public int getAge(){
 		return age;
 	}
+
+	@Override
+	public String toString() {
+		return "NewUser{" +
+				"name='" + name + '\'' +
+				", id=" + id +
+				", age=" + age +
+				'}';
+	}
 }
