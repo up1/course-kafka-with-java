@@ -17,6 +17,9 @@ public class DemoController {
     @Autowired
     private DemoProducerWithPojo producerWithPojo;
 
+    @Autowired
+    private DemoProducerWithJson producerWithJson;
+
     @GetMapping("/produce/{message}")
     public void send(@PathVariable String message) {
         producer.sendMessage(message);
@@ -27,6 +30,13 @@ public class DemoController {
         NewUser newUser = new NewUser();
         newUser.setName(name);
         producerWithPojo.sendMessage(newUser);
+    }
+
+    @GetMapping("/produce3/{name}")
+    public void sendWithJson(@PathVariable String name) throws JsonProcessingException {
+        NewUser newUser = new NewUser();
+        newUser.setName(name);
+        producerWithJson.sendMessage(newUser);
     }
 
 }
