@@ -1,0 +1,20 @@
+{
+  "namespace": "com.example.kafka_avro.models",
+  "type": "record",
+  "name": "NewUser",
+  "version": 1,
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    }
+  ]
+}
