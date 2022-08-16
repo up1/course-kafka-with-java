@@ -47,13 +47,21 @@ Add plugin to generate Java Class from Avro
 ```
 
 
-### 1. Gennerate Java class from schema
+### 2. Gennerate Java class from schema
 ```
 $./mvnw generate-sources
 $./mvnw spring-boot:run
 ```
 
-### 2. Post a new schema to the Schema Register
+### 3. List all subjects from the Schema Register
+
+```
+$http -v :8081/subjects
+```
+
+### 4. Manage the Schema Register
+
+Create a new subject
 ```
 $http -v POST :8081/subjects/NewUser/versions \
   Accept:application/vnd.schemaregistry.v1+json \
