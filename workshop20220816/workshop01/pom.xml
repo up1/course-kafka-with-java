@@ -36,6 +36,11 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<version>5.5.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -66,5 +71,13 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<!-- Confluent maven repo, required to Confluent Kafka Avro Dependencies -->
+		<repository>
+			<id>confluent</id>
+			<url>https://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
 
 </project>
