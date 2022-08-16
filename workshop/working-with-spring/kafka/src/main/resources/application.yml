@@ -5,9 +5,14 @@ spring:
   application:
     name: "demo-01"
   kafka:
+#    listener:
+#      concurrency: 10  # number of partitions
+#      ack-mode: manual_immediate # manual|manual_immediate
+# https://docs.spring.io/spring-kafka/api/org/springframework/kafka/listener/ContainerProperties.AckMode.html#MANUAL_IMMEDIATE
     consumer:
       bootstrap-servers: localhost:9092
       group-id: ${spring.application.name}-group
+#      enable-auto-commit: false # disable auto-commit
       auto-offset-reset: latest   #earliest|latest|none
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
