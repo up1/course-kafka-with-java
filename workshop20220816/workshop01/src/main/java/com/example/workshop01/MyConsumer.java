@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyConsumer {
 
-    @KafkaListener(topics = "demo.2.topic")
-    public void receiveData(Employee employee) {
-        System.out.println("Received message = " + employee);
+    @KafkaListener(topics = "demo.avro.topic.2")
+    public void receiveData(User user) {
+        System.out.println("Received message = " + user);
     }
 
 }
