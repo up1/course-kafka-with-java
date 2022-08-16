@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class MyConsumer {
 
     @KafkaListener(topics = "demo.1.topic")
-    public void receiveData(String message) {
-        System.out.println("Received message = " + message);
+    public void receiveData(Employee employee) {
+        System.out.println("Received message = " + employee);
     }
 
 }
