@@ -1,5 +1,5 @@
-## Workshop with Apache Kafka + Java + Spring Boot
-* Concepts of Apache Kafka
+## Workshop with Apache Kafka + Java
+* Concepts of [Apache Kafka](https://kafka.apache.org/)
   * Producer
   * Consumer
   * Consumer Group
@@ -8,4 +8,5 @@
     * Topic
     * Partition
 * Create Apache Kafka Cluster
-* Working with Java and Spring Boot
+* Working with Java
+  * [Spring Kafka](https://spring.io/projects/spring-kafka)
