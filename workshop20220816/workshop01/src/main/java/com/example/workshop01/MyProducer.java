@@ -13,7 +13,7 @@ public class MyProducer {
     public void tryToSend(String name) {
         Employee employee = new Employee();
         employee.setName(name);
-        kafkaTemplate.send("demo.2.topic", employee);
+        kafkaTemplate.send("demo.2.topic", "key", employee);
     }
 
 }
