@@ -1,0 +1,20 @@
+{
+  "namespace": "com.example.workshop01",
+  "type": "record",
+  "name": "User",
+  "version": 1,
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    }
+  ]
+}
